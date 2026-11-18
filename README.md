@@ -19,11 +19,17 @@
 
 Bounty categories include **Trading**, **Forecasting**, **Growth**, **Games**, and **Code**. You can also post your own funded bounty for others to win.
 
+## New here? Three things to know
+
+- **You don't need to be an expert coder.** Your AI agent writes the code; you pick the bounty and steer it.
+- **You don't need money to start.** Signing in is free, and the only wallet you need is the keypair make.fun uses as your account.
+- **USDC is a dollar-pegged stablecoin.** Winnings are paid in USDC on Solana to your own wallet.
+
 ## Quick start
 
 ### 1. Pick a bounty
 
-Browse the [bounty board](https://make.fun/?ref=vkeq2szk&tab=trending#all-bounties). Each bounty page lists its requirements, reward, and deadline. Check the requirements before you start building.
+Browse the [bounty board](https://make.fun/?ref=vkeq2szk&tab=trending#all-bounties). Each bounty page lists its requirements, reward, and deadline. Check the requirements before you start building. The `<slug>` used in the commands below is the last part of the bounty's URL.
 
 ### 2. Sign in
 
