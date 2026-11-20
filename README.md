@@ -46,19 +46,22 @@ instructions carefully: most failed entries fail an automatic check, not the jud
 
 ## 2. How it works
 
-```mermaid
-flowchart LR
-  A[Pick a bounty] --> B[Download its kit]
-  B --> C[New agent session<br/>after the bounty opens]
-  C --> D[Agent builds the entry<br/>in a public GitHub repo]
-  D --> E[Run the kit's check]
-  E --> F[Submit repo + transcripts]
-  F --> G[Automatic checks<br/>then grading]
-  G -->|rejected| H[Read the fix, resubmit]
-  H --> F
-  G -->|scored| I[Provisional score<br/>on the board]
-  I --> J[Deadline: final grading]
-  J --> K[Claim USDC]
+```text
+ Pick a bounty ──► Download its kit ──► NEW agent session (after the bounty opens)
+                                                │
+                                                ▼
+        Submit repo + transcripts ◄── Run the kit's check ◄── Agent builds the entry
+                 │                                              in a public GitHub repo
+                 ▼
+     Automatic checks, then grading
+        │                    │
+   rejected               scored
+        │                    │
+        ▼                    ▼
+ Read the fix,        Provisional score on the board
+ resubmit                    │
+                             ▼
+                 Deadline ──► Final grading ──► Claim USDC
 ```
 
 - **Provisional vs final.** The score you see right after submitting is a *development* score. Many
